@@ -1,0 +1,13 @@
+﻿<Window x:Class="pr7Wpf.Views.HistoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="History" Height="300" Width="400"
+        DataContext="{Binding HistoryViewModel, Source={StaticResource Locator}}">
+    <ListView ItemsSource="{Binding HistoryItems}">
+        <ListView.View>
+            <GridView>
+                <GridViewColumn Header="История операций" Width="300" DisplayMemberBinding="{Binding}" />
+            </GridView>
+        </ListView.View>
+    </ListView>
+</Window>
